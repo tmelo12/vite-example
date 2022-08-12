@@ -12,9 +12,7 @@ const Theme = {
     },
 
     fonts: {
-        Roboto_medium: 'Roboto_medium',
-        Roboto_bold: 'Roboto_bold',
-        Roboto_regular: 'Roboto_regular',
+        Roboto: 'Roboto',
     }
 }
 

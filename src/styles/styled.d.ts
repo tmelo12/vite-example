@@ -15,9 +15,7 @@ declare module 'styled-components' {
         },
 
         fonts: {
-            Roboto_medium: string;
-            Roboto_bold: string;
-            Roboto_regular: string;
+            Roboto: string;
         }
     }
 }

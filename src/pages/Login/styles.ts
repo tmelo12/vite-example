@@ -11,11 +11,13 @@ export const Background = styled.div`
 export const LogoDefesaAm = styled.img`
     width: 18rem;
     height: 18rem;
+    @media (max-width: 720px) {
+        display: none;
+    }
 `;
 
 export const ContentLogo = styled.div`
     flex: 2;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,22 +26,25 @@ export const ContentLogo = styled.div`
 
 export const ContentSignin = styled.div`
     flex: 1;
-
     background-color: #101A37;
     border-bottom-left-radius: 2.5rem;
     border-top-left-radius: 2.5rem;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 `;
 
 export const VisualIdent = styled.img`
     align-self: flex-end;
     width: 50%;
+    @media (max-width: 720px) {
+        display: none;
+    }
 `;
 
 export const Welcome = styled.h4`
     font-size: 2.5rem;
-    font-family: ${({ theme }) => theme.fonts.Roboto_bold};
+    font-family: ${({ theme }) => theme.fonts.Roboto};
     color: ${({ theme }) => theme.colors.text_white};
     text-align: center;
 `;
@@ -51,10 +56,14 @@ export const Form = styled.form`
 
 export const Input = styled.input`
     width: 25rem;
-    height: 3rem;
+    height: 2.5rem;
     background-color: ${({ theme }) => theme.colors.background};
     border-radius: 0.3rem;
     padding: 1rem;
+    @media (max-width: 720px) {
+        width: 15rem;
+        height: 2rem;
+    }
 `;
 
 export const SubmitButton = styled.button`
@@ -67,7 +76,7 @@ export const SubmitButton = styled.button`
 
 export const ForgotLink = styled.a`
     color: ${({ theme }) => theme.colors.text_white};
-    font-family: ${({ theme }) => theme.fonts.Roboto_bold};
+    font-family: ${({ theme }) => theme.fonts.Roboto};
 `;
 
 export const ContentForm = styled.div`
@@ -76,25 +85,34 @@ export const ContentForm = styled.div`
     gap: 1rem;
     align-items: center;
     width: 100%;
-    height: 100%;
-`;
-
-export const CheckRemember = styled.input.attrs({ type: 'checkbox' })`
-    width: 1rem;
-    height: 1rem;
-    accent-color: ${({ theme }) => theme.colors.button_submit};
-`;
-
-export const LabelRemember = styled.label`
-    color: ${({ theme }) => theme.colors.text_white};
-    font-family: ${({ theme }) => theme.fonts.Roboto_medium};
+    flex-direction: column;
 `;
 
 export const RememberGroup = styled.div`
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
     gap: 1rem;
+    align-self: center;
+    flex-direction: column;
+    .remember-checkbox{
+        width: 1rem;
+        height: 1rem;
+    }
+    .label-checkbox{
+        color: ${({ theme }) => theme.colors.text_white};
+        font-family: ${({ theme }) => theme.fonts.Roboto};
+    }
+`;
+
+export const LogoGovAM = styled.div`
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 100%;
+    .img-logo-gov{
+        width: 10rem;
+        display: flex;
+        @media (max-width: 1080px) {
+            display: none;
+        }
+    }
 `;

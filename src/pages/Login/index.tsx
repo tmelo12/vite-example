@@ -1,4 +1,4 @@
-import { Background, LogoDefesaAm, ContentLogo, ContentSignin, VisualIdent, Welcome, Form, Input, SubmitButton, ForgotLink, ContentForm, CheckRemember, LabelRemember, RememberGroup } from './styles';
+import { Background, LogoDefesaAm, ContentLogo, ContentSignin, VisualIdent, Welcome, Form, Input, SubmitButton, ForgotLink, ContentForm, RememberGroup, LogoGovAM } from './styles';
 import LogoDefesa from '../../assets/logos/dc.svg';
 import VisualGov from '../../assets/images/visual-gov.png';
 import { Formik } from 'formik';
@@ -29,16 +29,21 @@ function Login() {
                     <Form>
                         <ContentForm>
                             <Welcome>Bem Vindo(a)</Welcome>
-                            <Input id="email" name="email" placeholder="Digite seu e-mail" />
-                            <Input id="password" name="password" placeholder="Digite sua senha" />
+                            <Input id="email" name="email" type='email' placeholder="Digite seu e-mail" />
+                            <Input id="password" name="password" type='password' placeholder="Digite sua senha" />
                             <RememberGroup>
-                                <CheckRemember type="checkbox" /><LabelRemember>Permanecer conectado</LabelRemember>
-                            </RememberGroup>
-                            <RememberGroup>
-                                <CheckRemember type="checkbox" /><LabelRemember>Lembra-me do e-mail</LabelRemember>
+                                <div>
+                                    <input type='checkbox' className='remember-checkbox' /> <label className='label-checkbox'>Lembrar-me do e-mail</label>
+                                </div>
+                                <div>
+                                    <input type='checkbox' className='remember-checkbox' /> <label className='label-checkbox'>Manter conectado</label>
+                                </div>
                             </RememberGroup>
                             <SubmitButton onClick={() => alert('aaaa')} type="submit">Entrar</SubmitButton>
                             <ForgotLink href=''>Esqueceu sua senha?</ForgotLink>
+                            <LogoGovAM >
+                                <img className='img-logo-gov' src='http://apstatic.homologacao.am.gov.br/images/logo_governo/logo-gov-vertical.svg' />
+                            </LogoGovAM>
                         </ContentForm>
                     </Form>
                 </Formik>
